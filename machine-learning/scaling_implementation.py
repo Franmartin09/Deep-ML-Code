@@ -1,6 +1,7 @@
 import numpy as np
+from typing import Tuple
 
-def feature_scaling(data: np.ndarray) -> (np.ndarray, np.ndarray):
+def feature_scaling(data: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
 	# Your code here
 	suma=[]
 	for i in data:
@@ -11,7 +12,7 @@ def feature_scaling(data: np.ndarray) -> (np.ndarray, np.ndarray):
 	print(np.std(np.mean(data, keepdims=True)))
 	standardized_data=np.ndarray
 	normalized_data=np.ndarray
-	return standardized_data, normalized_data
+	return (standardized_data, normalized_data)
 
 data = np.array([[1, 2], [3, 4], [5, 6]])
 
